@@ -1,10 +1,9 @@
-import ChatBoxReceiver from './components/ChatBox';
+import ChatContainer from './components/ChatContainer';
 
 function App() {
   return (
-    <div >
-      <h1>Simple Chat</h1>
-      <ChatBoxReceiver user = "Lamia" avatar = "https://picsum.photos/200/300" message = "Hello Gultush!"/>
+    <div className = "chatDisplay">
+      <ChatContainer />
     </div>
   );
 }

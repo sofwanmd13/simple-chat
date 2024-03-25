@@ -1,3 +1,20 @@
+.chatDisplay {
+  background-color: #fafafa;
+  height: 100vh;
+  overflow: hidden; 
+}
+
+.chatList-container {
+  max-height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 .chatBoxReceiver {
   display: flex;
   justify-content: flex-start;
@@ -8,4 +25,167 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
+}
+
+.ant-avatar img {
+  object-fit: cover;
+  width: 45px; 
+  height: 45px;
+  border-radius: 50%;
+}
+
+.chatBoxReceiver p{
+  padding: 10px;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e);
+  background-size: 200% 200%;
+  border-radius: 10px;
+  max-width: 60%;
+  margin-left: 6px; /* Space between avatar and message */
+}
+
+.chatBoxSender p {
+  padding: 10px;
+  background: linear-gradient(-45deg, #23d5ab, #23a6d5);
+  background-size: 200% 200%;
+  border-radius: 10px;
+  max-width: 60%;
+  margin-right: 6px; /* Space between avatar and message */
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.chatBoxReceiver strong, .chatBoxSender strong{
+  font-size: 13;
+}
+
+.textContainer {
+  display:flex;
+  align-items: center;
+  padding-bottom: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+.textArea {
+  width: 69vw;
+  height: 5vh;
+  border-radius: 10px;
+  border-width: 0;
+  padding: 10px;
+  font-size: 18px;
+  margin-right: 1vw;
+  margin-left: 10vw;
+  resize: none; /* Disables resizing */
+}
+
+.textButton {
+  width: 10vw; 
+  height: 50px; 
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #34b7f1;
+  border-width: 0;
+  color: #fff;
+  margin-right: 10vw;
+}
+
+.textButton .buttonContent {
+  display: inline-block;
+}
+
+.textButton .buttonIcon {
+  display: none;
+  width: 100%;
+  height: 100%; 
+  padding-left: 5%;
+}
+
+@media (max-width: 500px) {
+  .textButton .buttonContent {
+      display: none;
+  }
+
+  .textButton .buttonIcon {
+      display: inline-block;
+  }
+}
+
+.login-title {
+  margin: 10px;
+  text-align: center;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  height: 7vh;
+}
+
+.user-input {
+  margin: 10px;
+  height: 30px;
+  width: 25vw;
+  border-radius: 10px;
+  border-width: 10px;
+  font-size: 15px;
+  padding-inline: 5px;
+}
+
+.loginButton {
+  width: 10vw;
+  height: 7vh;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #075e54;
+  border-width: 0;
+  color: #fff;
+  margin: 10px;
+}
+
+.logOutButton {
+  width: 10vw;
+  height: 7vh;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #075e54;
+  border-width: 0;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.header-panel {
+  display: flex;
+  justify-content: space-between; /* Adjusted to space-between for title centering */
+  align-items: center;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.header-panel::before {
+  content: '';
+  flex: 1;
+}
+
+.header-panel h1 {
+  flex: 2;
+  text-align: center;
+}
+
+.header-panel .logOutButton-container {
+  flex: 1;
+  text-align: right;
 }
