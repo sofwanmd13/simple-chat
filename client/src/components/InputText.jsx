@@ -6,8 +6,10 @@ export default function InputText({addMessage}) {
     const [message, setMessage] = useState('');
 
     function addNewMessage(){
-        addMessage({message})
-        setMessage('')
+        if(message.trim() !==''){
+            addMessage({message})
+            setMessage('')
+        }
     }
 
     return ( 
