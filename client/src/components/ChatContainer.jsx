@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import socketIOClient from  "socket.io-client";
 import UserLogin from "./UserLogin";
 import InputText from './InputText';
-import ChatBoxReciever, { ChatBoxSender } from './ChatBox';
+import ChatBoxReceiver, { ChatBoxSender } from './ChatBox';
 
 function ChatContainer() {
     
@@ -53,7 +53,7 @@ function ChatContainer() {
             if(chat.user === user) {
                 return <ChatBoxSender  key={index} message={chat.message} avatar={chat.avatar} user={chat.user} />
             }else {
-                return <ChatBoxReciever key={index} message={chat.message} avatar={chat.avatar} user={chat.user} />
+                return <ChatBoxReceiver key={index} message={chat.message} avatar={chat.avatar} user={chat.user} />
             }
         });
     }
